@@ -5,8 +5,14 @@ module.exports = function (app) {
 
     app.route('/').get(jsonku.index);
 
-    app.route('/tampil').get(jsonku.GetAllMahasiswa);
+    app.route('/show').get(jsonku.GetAllMahasiswa);
 
-    app.route('/tampil/:id').get(jsonku.GetById);
+    app.route('/get/:id').get(jsonku.GetById);
+
+    app.route('/insert').post(jsonku.inputMhs);
+
+    app.route('/change').put(jsonku.ChangeMhs);
+
+    app.route('/delete').delete(jsonku.deleteById);
 
 };

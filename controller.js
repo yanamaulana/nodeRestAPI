@@ -78,3 +78,15 @@ exports.deleteById = function (req, res) {
             }
         });
 };
+
+//get data detail using join table group
+exports.showGroupMatakuliah = function (req, res) {
+    connection.query("SELECT mahasiswa.id ,mahasiswa.nim, mahasiswa.nama, mahasiswa.jurusan, matakuliah.mata_kuliah,matakuliah.sks from krs JOIN matakuliah JOIN mahasiswa where krs.id_matkul = matakuliah.id_matkul AND krs.id_mhs = mahasiswa.id ORDER BY mahasiswa.id",
+        function (error, rows, fields) {
+            if (error) {
+                console.log(error);
+            } else {
+                response.oknested(rows, res);
+            }
+        });
+};

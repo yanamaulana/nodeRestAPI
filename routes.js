@@ -15,4 +15,6 @@ module.exports = function (app) {
 
     app.route('/delete').delete(jsonku.deleteById);
 
+    app.route('/detailmahasiswa').get(jsonku.showGroupMatakuliah);
+
 };

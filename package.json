@@ -1,0 +1,25 @@
+{
+  "name": "node_js",
+  "version": "1.0.0",
+  "description": "Rest Api",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yanamaulana/noderestapi.git"
+  },
+  "keywords": [
+    "rest",
+    "ap",
+    "node",
+    "js"
+  ],
+  "author": "yana",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yanamaulana/noderestapi/issues"
+  },
+  "homepage": "https://github.com/yanamaulana/noderestapi#readme"
+}

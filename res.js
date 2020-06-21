@@ -12,14 +12,10 @@ exports.ok = function (values, res) {
 
 //response nested table
 exports.oknested = function (values, res) {
-    // akumulates
     const hasil = values.reduce((akumulasikan, item) => {
         if (akumulasikan[item.nama]) {
-            //buat variable group
             const group = akumulasikan[item.nama];
-            //cek arai if matakuliah
             if (Array.isArray(group.mata_kuliah)) {
-                // add group mata_kuliah
                 group.mata_kuliah.push(item.mata_kuliah)
             } else {
                 group.mata_kuliah = [group.mata_kuliah, item.mata_kuliah];
